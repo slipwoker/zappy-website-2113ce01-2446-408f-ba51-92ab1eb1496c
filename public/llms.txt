@@ -1,57 +1,43 @@
-# NextRound — Generative Engine Optimization Map
-
-> A engineering consulting business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### Home
-https://nextround-2113ce01.zappy5.app
+https://example.com
 Expert engineering due diligence and consulting services for startups, founders, and investors. Get hands-on technical validation and leadership today.
 
-### Services
-https://nextround-2113ce01.zappy5.app/services
-Comprehensive engineering consulting services including technical due diligence, product development consulting, and manufacturing consulting for startups and investors.
-
 ### About
-https://nextround-2113ce01.zappy5.app/about
+https://example.com/about
 Learn about NextRound's engineering consulting services, our approach to engineering due diligence, and our commitment to hands-on technical leadership for startups.
 
 ### Contact
-https://nextround-2113ce01.zappy5.app/contact
+https://example.com/contact
 Get in touch with NextRound for engineering due diligence, product development consulting, and manufacturing consulting services. Contact us today for expert guidance.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://nextround-2113ce01.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://nextround-2113ce01.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://nextround-2113ce01.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About NextRound
-NextRound is a business in the engineering consulting industry.
-
-## Target Audience
-startups, founders, and investors
-
-## Industry
-engineering consulting
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://nextround-2113ce01.zappy5.app/sitemap.xml
-- **Robots.txt**: https://nextround-2113ce01.zappy5.app/robots.txt
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
