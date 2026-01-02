@@ -1,0 +1,640 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Engineering Consulting Services — NextRound</title>
+  <meta name="description" content="Comprehensive engineering consulting services including technical due diligence, product development consulting, and manufacturing consulting for startups and investors.">
+  <meta name="keywords" content="engineering consulting services, engineering due diligence, manufacturing consulting, product development consulting, technical validation">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '2113ce01-2446-408f-ba51-92ab1eb1496c',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="/assets/nextround-engineering-consulting-logo.webp" alt="NextRound" class="logo">
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      
+      <button class="phone-header-btn" aria-label="Call us">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      
+      <div class="nav-cta-container">
+        <li class="nav-cta-item">
+          <a href="/contact" class="nav-cta-btn">Contact</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Engineering Consulting Services That Deliver Results</h1>
+      <h3>Comprehensive technical expertise for startups, founders, and investors seeking confident growth</h3>
+    </div>
+  </section>
+
+  <section class="section service-section" id="engineering-due-diligence" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>Engineering Due Diligence</h2>
+          <p>Our engineering due diligence services provide comprehensive technical assessments that give you complete confidence in your investment decisions. We examine every aspect of technical operations, from code quality and architecture to team capabilities and development processes. This thorough approach ensures you understand both the strengths and potential risks before making critical business decisions.</p>
+          <p>When conducting engineering due diligence, we evaluate intellectual property, assess technical debt, analyze scalability potential, and review security measures. Our team has extensive experience across multiple industries and technology stacks, enabling us to provide insights that matter most to your specific situation. We don't just identify problems—we provide actionable recommendations for addressing them.</p>
+          <p>Our engineering consulting services approach to due diligence goes beyond traditional audits. We engage with development teams, review documentation, examine testing practices, and assess operational readiness. This hands-on methodology ensures nothing is overlooked and you receive a complete picture of technical health and capability.</p>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-4" data-context="Engineering consultant reviewing detailed technical documentation and code architecture with startup founder in professional office setting" src="/assets/nextround-engineering-consulting-service-service-4.webp" alt="Engineering due diligence technical assessment and code review">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="technical-leadership-strategy" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail reverse">
+      
+        <div class="service-detail-image">
+          <img data-placeholder="service-5" data-context="Senior engineering leader providing hands-on technical guidance and mentorship to development team in collaborative workspace" src="/assets/nextround-engineering-consulting-service-service-5.webp" alt="Engineering consulting services leadership and team guidance">
+        </div>
+        <div class="service-detail-content">
+          <h2>Technical Leadership &amp; Strategy</h2>
+          <p>NextRound's engineering consulting services include hands-on technical leadership that drives meaningful progress. Whether you need interim CTO support, technical strategy development, or engineering team mentorship, we provide the expertise required to build robust technical organizations that scale effectively.</p>
+          <p>Our approach to technical leadership focuses on establishing sustainable practices, building high-performing teams, and creating technical roadmaps aligned with business objectives. We work directly with your engineering teams, providing guidance on architecture decisions, technology selection, and development methodologies that maximize efficiency and quality.</p>
+          <p>Through our product development consulting expertise, we help organizations establish engineering cultures that attract top talent and deliver exceptional results. We implement best practices for code review, testing, deployment, and monitoring—ensuring your technical operations are world-class.</p>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="product-development-consulting" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>Product Development Consulting</h2>
+          <p>Our product development consulting services guide you from initial concept through successful market launch. We combine technical expertise with practical business understanding to help you build products that customers love and that scale efficiently as your business grows.</p>
+          <p>The product development process involves numerous critical decisions about technology stack, architecture design, feature prioritization, and development methodology. Our engineering consulting services team helps you navigate these decisions with confidence, ensuring you make choices that support both immediate needs and long-term goals.</p>
+          <p>We provide hands-on support throughout the development lifecycle, from requirements definition and technical specification through implementation, testing, and deployment. Our manufacturing consulting expertise ensures that products are designed for efficient production, meet quality standards, and can be delivered at scale.</p>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-6" data-context="Product development team working on new product prototypes with engineering consultant reviewing manufacturing specifications" src="/assets/nextround-engineering-consulting-service-service-6.webp" alt="Product development consulting and prototype review process">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="manufacturing-consulting" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail reverse">
+      
+        <div class="service-detail-image">
+          <img data-placeholder="service-7" data-context="Manufacturing consultant examining production line and quality control processes in modern manufacturing facility" src="/assets/nextround-engineering-consulting-service-service-7.webp" alt="Manufacturing consulting and production optimization">
+        </div>
+        <div class="service-detail-content">
+          <h2>Manufacturing Consulting</h2>
+          <p>Our manufacturing consulting services help you optimize production processes, improve quality control, and reduce costs while maintaining or improving product quality. We bring extensive experience in manufacturing operations, supply chain management, and production engineering to help you achieve operational excellence.</p>
+          <p>Through detailed analysis of your manufacturing operations, we identify opportunities for improvement in efficiency, quality, and cost-effectiveness. Our engineering due diligence approach to manufacturing assessment examines equipment capabilities, process flows, quality systems, and workforce capabilities to provide comprehensive insights.</p>
+          <p>Whether you're launching a new product, scaling existing production, or seeking to improve manufacturing efficiency, our team provides the hands-on support needed to achieve your goals. We help implement lean manufacturing principles, establish quality management systems, and optimize supply chain operations for maximum effectiveness.</p>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="technical-risk-assessment" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>Technical Risk Assessment</h2>
+          <p>Understanding and managing technical risk is critical for successful product development and business operations. Our engineering consulting services include comprehensive risk assessment that identifies potential issues before they become problems, enabling proactive mitigation strategies.</p>
+          <p>We evaluate risks across multiple dimensions including technology choices, architecture decisions, security vulnerabilities, scalability limitations, and operational dependencies. Our engineering due diligence methodology ensures thorough examination of all potential risk factors, providing you with complete visibility into technical exposure.</p>
+          <p>Beyond identifying risks, we help you develop practical mitigation strategies that balance risk reduction with business objectives. Our recommendations are prioritized based on impact and likelihood, enabling you to focus resources where they matter most.</p>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-8" data-context="Engineering team conducting technical risk assessment with detailed analysis of system architecture and security measures" src="/assets/nextround-engineering-consulting-service-service-8.webp" alt="Technical risk assessment and security evaluation process">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="scalability-planning" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail reverse">
+      
+        <div class="service-detail-image">
+          <img data-placeholder="service-9" data-context="Engineering consultant reviewing scalability architecture and infrastructure planning with technical team on digital displays" src="/assets/nextround-engineering-consulting-service-service-9.webp" alt="Scalability planning and architecture review for growth">
+        </div>
+        <div class="service-detail-content">
+          <h2>Scalability Planning</h2>
+          <p>Building systems that scale effectively requires careful planning and expert execution. Our product development consulting services include comprehensive scalability planning that ensures your technical infrastructure can support growth without major re-architecture or performance degradation.</p>
+          <p>We analyze current architecture, identify scalability bottlenecks, and design solutions that support both immediate needs and future growth. Our engineering consulting services team has extensive experience with high-scale systems across various industries, enabling us to provide proven strategies for achieving scalability.</p>
+          <p>Through hands-on implementation support, we help you execute scalability improvements efficiently. Whether you need to optimize database performance, implement caching strategies, or redesign system architecture, our team provides the expertise required for success.</p>
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="team-building-mentorship" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>Team Building &amp; Mentorship</h2>
+          <p>Building high-performing engineering teams requires more than just hiring talented individuals. Our engineering consulting services include team building and mentorship programs that develop technical capabilities, establish effective collaboration patterns, and create cultures of excellence.</p>
+          <p>We work directly with your engineering teams, providing guidance on technical best practices, code review processes, testing methodologies, and development workflows. Our hands-on approach ensures knowledge transfer and capability development that continues long after our engagement ends.</p>
+          <p>Through our manufacturing consulting and product development consulting expertise, we help teams develop the skills needed to deliver exceptional products efficiently. We establish mentorship programs, implement training initiatives, and create development pathways that support continuous improvement.</p>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-10" data-context="Engineering mentor providing one-on-one guidance to junior engineer in modern tech workspace with collaborative atmosphere" src="/assets/nextround-engineering-consulting-service-service-10.webp" alt="Engineering team mentorship and professional development">
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Elevate Your Engineering Capabilities?</h2>
+      <p>Partner with NextRound for engineering consulting services that deliver measurable results. Our comprehensive approach to engineering due diligence, product development consulting, and manufacturing consulting ensures you have the expertise needed for success.</p>
+      <a href="/contact" class="btn-primary">Get Started Today</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2026 NextRound. All rights reserved.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="Privacy Policy">
+              Privacy Policy
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="Accessibility">
+              Accessibility
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="Terms & Conditions">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>Generated by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '2113ce01-2446-408f-ba51-92ab1eb1496c';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>
