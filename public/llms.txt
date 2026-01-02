@@ -1,43 +1,53 @@
-# Business — Generative Engine Optimization Map
+# NextRound — Generative Engine Optimization Map
+
+> A engineering consulting business.
 
 ---
 
 ## Pages
 
 ### Home
-https://example.com
+https://nextround.zappy5.app
 Expert engineering due diligence and consulting services for startups, founders, and investors. Get hands-on technical validation and leadership today.
 
 ### About
-https://example.com/about
+https://nextround.zappy5.app/about
 Learn about NextRound's engineering consulting services, our approach to engineering due diligence, and our commitment to hands-on technical leadership for startups.
 
 ### Contact
-https://example.com/contact
+https://nextround.zappy5.app/contact
 Get in touch with NextRound for engineering due diligence, product development consulting, and manufacturing consulting services. Contact us today for expert guidance.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://nextround.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://nextround.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://nextround.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About NextRound
+NextRound is a business in the engineering consulting industry.
+
+## Target Audience
+startups, founders, and investors
+
+## Industry
+engineering consulting
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://nextround.zappy5.app/sitemap.xml
+- **Robots.txt**: https://nextround.zappy5.app/robots.txt
